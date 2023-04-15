@@ -1,9 +1,24 @@
-import React from 'react'
+import { Container } from "@mui/material";
+import Link from "@mui/material/Link";
+import Typography from "@mui/material/Typography";
 
-const Footer = () => {
+function Copyright(props) {
   return (
-    <div>Footer</div>
-  )
+    <Typography
+      variant="body2"
+      color="text.secondary"
+      align="center"
+      {...props}
+    >
+      {"Copyright © "}
+      <Link color="inherit">Hakan KAVCI</Link> 2023
+      {"."}
+    </Typography>
+  );
 }
 
-export default Footer
+const Footer = () => {
+  return <Copyright sx={{ mt: 8, mb: 4 }} />;
+};
+
+export default Footer;
