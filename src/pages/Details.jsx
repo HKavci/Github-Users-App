@@ -66,7 +66,7 @@ const Details = () => {
           style={{ borderRadius: "50%", border: "1px solid blue" }}
         />
         <Typography variant="h5" mt={3} textTransform="capitalize">
-          {userDetails?.name}
+          <b>{userDetails?.name}</b>
         </Typography>
         <Typography variant="p">{userDetails?.html_url}</Typography>
       </Box>

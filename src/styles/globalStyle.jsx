@@ -2,13 +2,14 @@ export const statistics = {
   display: "flex",
   alignItems: "center",
   justifyContent: "space-evenly",
-  width: "120px",
+  width: "130px",
   height: "70px",
   border: "1px dotted gray",
   borderRadius: "5px",
   padding: 1,
   boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
   backgroundColor: "white",
+  
 };
 
 export const iconStyle = [
@@ -39,11 +40,14 @@ export const iconStyle = [
 ];
 
 export const boxStyle = {
-  maxHeight: 350,
+  maxHeight: 450,
   maxWidth: 450,
+  minWidth: 280,
   overflow: "scroll",
   "&::-webkit-scrollbar": { display: "none" },
-  margin: 5,
+  marginTop: 4,
+  marginLeft: 2,
+  marginRight: 3,
   boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
   padding: 2,
   backgroundColor: "white",
@@ -51,7 +55,7 @@ export const boxStyle = {
 
 export const visibilityStyle = {
   backgroundColor: "magenta",
-  border: "1px solid gray",
+  border: "1px dotted gray",
   borderRadius: "5px",
   padding: 0.3,
   textTransform: "capitalize",

@@ -6,12 +6,12 @@ const RepoInfo = ({ repo, login }) => {
   return (
     <Box sx={boxStyle}>
       <Box display="flex" alignItems="center" justifyContent="space-between">
-        <Typography variant="h5">Repositories</Typography>
+        <Typography variant="h5"><b>Repositories</b></Typography>
         <a
           href={`https://github.com/${login}?tab=repositories`}
           target="_blank"
         >
-          View All Repositories
+          View All Repos
         </a>
       </Box>
       <Typography variant="p">(Only 30 repos)</Typography>
@@ -34,7 +34,7 @@ const RepoInfo = ({ repo, login }) => {
                 {item.visibility}
               </Typography>
               <Typography variant="h6" mt={1} textAlign="center">
-                {item.name}
+                <b>{item.name}</b>
               </Typography>
               <Typography variant="p" display="block" mt={1}>
                 {item.description}
@@ -45,27 +45,27 @@ const RepoInfo = ({ repo, login }) => {
                 display: "flex",
                 justifyContent: "space-between",
                 alignItems: "center",
-                margin: "0 15px",
+                margin: "0 10px",
               }}
             >
               <Box display="flex" flexDirection="column" gap={1} mt={2}>
                 {item.language && (
-                  <Typography variant="p">Language: {item.language}</Typography>
+                  <Typography variant="p"><b>Language:</b> {item.language}</Typography>
                 )}
-                <Typography variant="p">Created on: {date}</Typography>{" "}
+                <Typography variant="p"><b>Created on:</b> {date}</Typography>{" "}
                 <a href={item.html_url} target="_blank">
                   View Repo
                 </a>{" "}
               </Box>
               <List sx={{ display: "flex", flexDirection: "column" }}>
                 <Typography variant="p">
-                  {item.stargazers_count} stars
+                  <b>{item.stargazers_count}</b> stars
                 </Typography>
                 <Typography variant="p">
-                  {item.watchers_count} watchers
+                  <b>{item.watchers_count}</b> watchers
                 </Typography>
                 <Typography variant="p">
-                  {item.open_issues_count} issues
+                  <b>{item.open_issues_count}</b> issues
                 </Typography>
               </List>
             </List>
