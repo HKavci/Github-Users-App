@@ -1,14 +1,9 @@
 import { Box, Container, List, Typography } from "@mui/material";
+import { boxStyle } from "../styles/globalStyle";
 
 const FollowersInfo = ({ followers }) => {
   return (
-    <Box
-      maxHeight={350}
-      maxWidth={450}
-      overflow="scroll"
-      sx={{ "&::-webkit-scrollbar": { display: "none" } }}
-      m={5}
-    >
+    <Box sx={boxStyle}>
       <Typography variant="h5">Followers</Typography>
       <Typography variant="p">(Only 30 people)</Typography>
       {followers?.map((follower) => {

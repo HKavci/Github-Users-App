@@ -34,6 +34,7 @@ const Home = () => {
           type="text"
           label="Search"
           value={search}
+          autoFocus
           onChange={(e) => setSearch(e.target.value)}
           onKeyPress={(e) => {
             if (e.key === "Enter" || e.key === "NumpadEnter") {

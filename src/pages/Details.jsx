@@ -1,11 +1,4 @@
-import {
-  Box,
-  Container,
-  Grid,
-  List,
-  Typography,
-  capitalize,
-} from "@mui/material";
+import { Box, Container, Grid, List, Typography } from "@mui/material";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
@@ -87,7 +80,7 @@ const Details = () => {
         }}
       >
         <Box sx={statistics}>
-          <PeopleOutlineIcon sx={iconStyle} />
+          <PeopleOutlineIcon sx={iconStyle[0]} />
           <Box width="70px">
             <Typography variant="p">Followers</Typography>{" "}
             <Typography variant="h4" textAlign="center">
@@ -96,7 +89,7 @@ const Details = () => {
           </Box>
         </Box>
         <Box sx={statistics}>
-          <PersonAddAltIcon sx={iconStyle} />
+          <PersonAddAltIcon sx={iconStyle[1]} />
           <Box width="70px">
             <Typography variant="p">Following</Typography>{" "}
             <Typography variant="h4" textAlign="center">
@@ -105,7 +98,7 @@ const Details = () => {
           </Box>
         </Box>
         <Box sx={statistics}>
-          <SourceIcon sx={iconStyle} />
+          <SourceIcon sx={iconStyle[2]} />
           <Box width="70px">
             <Typography variant="p" ml={2}>
               Repos
@@ -116,7 +109,7 @@ const Details = () => {
           </Box>
         </Box>
         <Box sx={statistics}>
-          <PagesIcon sx={iconStyle} />
+          <PagesIcon sx={iconStyle[3]} />
           <Box width="70px">
             <Typography variant="p" ml={2}>
               Gists
