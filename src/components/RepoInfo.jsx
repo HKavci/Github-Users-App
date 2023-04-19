@@ -3,16 +3,19 @@ import { boxStyle, visibilityStyle } from "../styles/globalStyle";
 import { useTheme } from "@mui/material/styles";
 
 const RepoInfo = ({ repo, login }) => {
-  const theme = useTheme()
+  const theme = useTheme();
   return (
     <Box sx={boxStyle}>
       <Box display="flex" alignItems="center" justifyContent="space-between">
-        <Typography variant="h5"><b>Repositories</b></Typography>
+        <Typography variant="h5">
+          <b>Repositories</b>
+        </Typography>
         <a
           href={`https://github.com/${login}?tab=repositories`}
           target="_blank"
+          style={{ color: theme.palette.secondary.main }}
         >
-          View All Repos
+          <b>View All Repos</b>
         </a>
       </Box>
       <Typography variant="p">(Only 30 repos)</Typography>
@@ -28,10 +31,7 @@ const RepoInfo = ({ repo, login }) => {
             mt={3}
           >
             <Box>
-              <Typography
-                variant="p"
-                sx={visibilityStyle}
-              >
+              <Typography variant="p" sx={visibilityStyle}>
                 {item.visibility}
               </Typography>
               <Typography variant="h6" mt={1} textAlign="center">
@@ -51,11 +51,19 @@ const RepoInfo = ({ repo, login }) => {
             >
               <Box display="flex" flexDirection="column" gap={1} mt={2}>
                 {item.language && (
-                  <Typography variant="p"><b>Language:</b> {item.language}</Typography>
+                  <Typography variant="p">
+                    <b>Language:</b> {item.language}
+                  </Typography>
                 )}
-                <Typography variant="p"><b>Created on:</b> {date}</Typography>{" "}
-                <a href={item.html_url} target="_blank">
-                  View Repo
+                <Typography variant="p">
+                  <b>Created on:</b> {date}
+                </Typography>{" "}
+                <a
+                  href={item.html_url}
+                  target="_blank"
+                  style={{ color: theme.palette.secondary.main }}
+                >
+                  <b>View Repo</b>
                 </a>{" "}
               </Box>
               <List sx={{ display: "flex", flexDirection: "column" }}>
