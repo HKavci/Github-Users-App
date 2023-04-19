@@ -63,7 +63,7 @@ const Details = () => {
           src={userDetails?.avatar_url}
           alt="image"
           width="300px"
-          style={{ borderRadius: "50%", border: "1px solid blue" }}
+          style={{ borderRadius: "50%", border: "1px solid #C7FFED" }}
         />
         <Typography variant="h5" mt={3} textTransform="capitalize">
           <b>{userDetails?.name}</b>

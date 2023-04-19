@@ -1,3 +1,5 @@
+
+
 export const statistics = {
   display: "flex",
   alignItems: "center",
@@ -9,33 +11,32 @@ export const statistics = {
   padding: 1,
   boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
   backgroundColor: "white",
-  
 };
 
-export const iconStyle = [
+export const iconStyle =  [
   {
     border: "1px solid black",
     borderRadius: "50%",
     padding: 0.7,
-    backgroundColor: "orange",
-  },
-  {
-    border: "1px solid black",
-    borderRadius: "50%",
-    padding: 0.7,
-    backgroundColor: "blue",
-  },
-  {
-    border: "1px solid black",
-    borderRadius: "50%",
-    padding: 0.7,
-    backgroundColor: "green",
+    backgroundColor: "#C7FFED",
   },
   {
     border: "1px solid black",
     borderRadius: "50%",
     padding: 0.7,
     backgroundColor: "pink",
+  },
+  {
+    border: "1px solid black",
+    borderRadius: "50%",
+    padding: 0.7,
+    backgroundColor: "#89D99D",
+  },
+  {
+    border: "1px solid black",
+    borderRadius: "50%",
+    padding: 0.7,
+    backgroundColor: "#F28585",
   },
 ];
 
@@ -53,8 +54,8 @@ export const boxStyle = {
   backgroundColor: "white",
 };
 
-export const visibilityStyle = {
-  backgroundColor: "magenta",
+export const visibilityStyle = (theme) => ({
+  backgroundColor: theme.palette.primary.main,
   border: "1px dotted gray",
   borderRadius: "5px",
   padding: 0.3,
@@ -62,5 +63,5 @@ export const visibilityStyle = {
   display: "block",
   width: "40px",
   mt: 0.5,
-  ml: "15px",
-};
+  ml: "10px",
+});

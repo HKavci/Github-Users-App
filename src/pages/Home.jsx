@@ -27,7 +27,7 @@ const Home = () => {
   return (
     <Container>
       <Typography variant="h5" mt={5} textAlign="center">
-        GitHub User Search
+        Search User
       </Typography>
       <Box sx={{ display: "flex", justifyContent: "center", marginTop: 3 }}>
         <TextField

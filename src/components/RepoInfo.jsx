@@ -1,8 +1,9 @@
 import { Box, List, Typography } from "@mui/material";
 import { boxStyle, visibilityStyle } from "../styles/globalStyle";
-
+import { useTheme } from "@mui/material/styles";
 
 const RepoInfo = ({ repo, login }) => {
+  const theme = useTheme()
   return (
     <Box sx={boxStyle}>
       <Box display="flex" alignItems="center" justifyContent="space-between">
