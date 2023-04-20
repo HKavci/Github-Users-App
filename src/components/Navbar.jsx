@@ -46,7 +46,7 @@ const Navbar = ({ handleDarkMode }) => {
             }}
             onClick={() => navigate("/")}
           >
-            GITHUB PROFILE APP
+            GITHUB USERS APP
           </Typography>
           <IconButton
             color="inherit"

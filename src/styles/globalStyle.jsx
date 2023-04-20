@@ -57,7 +57,7 @@ export const visibilityStyle = (theme) => ({
   padding: 0.3,
   textTransform: "capitalize",
   display: "block",
-  width: "40px",
+  width: "45px",
   mt: 0.5,
-  ml: "10px",
+  mr: "auto",
 });
