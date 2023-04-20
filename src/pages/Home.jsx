@@ -25,8 +25,19 @@ const Home = () => {
   };
 
   return (
-    <Container>
-      <Typography variant="h5" mt={5} textAlign="center">
+    <Container
+      sx={{
+        minHeight: "70vh",
+      }}
+    >
+      <Typography
+        variant="h5"
+        textAlign="center"
+        mt={5}
+        pt={3}
+        fontWeight="bolder"
+        color="#589A8D"
+      >
         Search User
       </Typography>
       <Box sx={{ display: "flex", justifyContent: "center", marginTop: 3 }}>

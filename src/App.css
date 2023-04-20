@@ -1,4 +1,11 @@
+.App {
+  background-color: #f1f5f8; /* set the default background color */
+}
+
+.dark-mode .App {
+  background-color: rgba(0, 0, 0, 0.6); /* set the dark mode background color */
+}
+
 body {
-    background-color: #f1f5f8;
-    /* background-color: rgba(0, 0, 0, 0.7); */
+  min-height: 100vh;
 }

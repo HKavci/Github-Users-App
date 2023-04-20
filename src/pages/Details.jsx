@@ -57,7 +57,11 @@ const Details = () => {
   console.log(repo);
 
   return (
-    <Container sx={{ border: "1px solid gray", minHeight: "100%" }}>
+    <Container
+      sx={{
+        minHeight: "100%",
+      }}
+    >
       <Box textAlign="center" mt={5} mb={5}>
         <img
           src={userDetails?.avatar_url}

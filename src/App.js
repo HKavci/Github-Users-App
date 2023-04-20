@@ -1,4 +1,3 @@
-import { BrowserRouter } from "react-router-dom";
 import "./App.css";
 import AppRouter from "./router/AppRouter";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
@@ -9,33 +8,34 @@ function App() {
   const theme = createTheme({
     palette: {
       primary: {
-        main: "#C7FFED",
+        main: "#589A8D",
       },
       secondary: {
         main: "#589A8D",
       },
-      type: darkMode ? "dark" : "light",
+      mode: darkMode ? "dark" : "light",
     },
   });
 
-  const darkTheme = createTheme({
-    palette: {
-      background: {
-        paper: "rgba(0, 0, 0, 0.7)",
-      },
-      type: darkMode ? "dark" : "light",
-    },
-  });
+  // const darkTheme = createTheme({
+  //   palette: {
+  //     background: {
+  //       paper: "rgba(0, 0, 0, 0.6)",
+  //       // default: "#f1f5f8"
+  //     },
+  //     mode: darkMode ? "dark" : "light",
+  //   },
+  // });
 
   const handleDarkMode = () => {
-    setDarkMode(!darkMode)
-  }
+    setDarkMode(!darkMode);
+  };
 
   return (
-    <ThemeProvider theme={darkMode ? darkTheme : theme}>
-      <BrowserRouter>
+    <ThemeProvider theme={theme}>
+      <div className={`App ${darkMode ? "dark-mode" : ""}`}>
         <AppRouter darkMode={darkMode} handleDarkMode={handleDarkMode} />
-      </BrowserRouter>
+      </div>
     </ThemeProvider>
   );
 }

@@ -1,5 +1,3 @@
-import { Container } from "@mui/material";
-import Link from "@mui/material/Link";
 import Typography from "@mui/material/Typography";
 
 function Copyright(props) {
@@ -8,10 +6,12 @@ function Copyright(props) {
       variant="body2"
       color="text.secondary"
       align="center"
+      padding={1}
+      fontSize="1.2rem"
       {...props}
     >
       {"Copyright © "}
-      <Link color="inherit">Hakan KAVCI</Link> 2023
+      <b color="inherit">Hakan KAVCI</b> 2023
       {"."}
     </Typography>
   );

@@ -7,9 +7,7 @@ import { useNavigate } from "react-router-dom";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 
-
-
-const Navbar = ({darkMode, handleDarkMode}) => {
+const Navbar = ({ handleDarkMode }) => {
   const navigate = useNavigate();
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -22,12 +20,12 @@ const Navbar = ({darkMode, handleDarkMode}) => {
             aria-label="menu"
             sx={{
               mr: 2,
-              backgroundColor: "#f1f5f8",
-              border: "1px solid gray",
+              // backgroundColor: "#f1f5f8",
+              border: "1px solid white",
               transition: "transform 0.7s",
               ":hover": {
                 transform: "rotate(360deg) scale(1.3)",
-                backgroundColor: "#F2CDAC",
+                // backgroundColor: "white",
               },
             }}
           >
@@ -41,24 +39,25 @@ const Navbar = ({darkMode, handleDarkMode}) => {
               maxWidth: "230px",
               flexGrow: 1,
               cursor: "pointer",
+              fontWeight: "bolder",
               textAlign: { xs: "center", md: "left" },
               transition: "transform 0.5s",
               ":hover": {
                 transform: "scale(1.1)",
-              }
+              },
             }}
             onClick={() => navigate("/")}
           >
             GITHUB PROFILE APP
           </Typography>
-          {/* <Button color="inherit">Login</Button> */}
           <IconButton
-          color="inherit"
-          aria-label="toggle dark mode"
-          onClick={handleDarkMode}
-        >
-          <Brightness4Icon />
-        </IconButton>
+            color="inherit"
+            aria-label="toggle dark mode"
+            onClick={handleDarkMode}
+            sx={{ border: "1px solid white", marginLeft: "auto" }}
+          >
+            <Brightness4Icon />
+          </IconButton>
         </Toolbar>
       </AppBar>
     </Box>
