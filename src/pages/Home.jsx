@@ -3,6 +3,7 @@ import { useState } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import axios from "axios";
 import UserCard from "../components/UserCard";
+import { toastWarnNotify } from "../helper/ToastNotify";
 
 const Home = () => {
   const [search, setSearch] = useState("");
@@ -13,15 +14,27 @@ const Home = () => {
   const getUser = async () => {
     try {
       const { data } = await axios(BASE_URL);
-      setUserList(data);
+      if (data.items?.length) {
+        setUserList(data);
+        return true;
+      } else {
+        setUserList([]);
+        return false;
+      }
     } catch (error) {
       console.log(error);
+      toastWarnNotify("Something went wrong");
     }
   };
 
-  const handleClick = () => {
-    getUser();
+  console.log(userList);
+  
+  const handleClick = async () => {
+    const result = await getUser();
     setSearch("");
+    if (!result) {
+      toastWarnNotify("User can not be found");
+    }
   };
 
   return (

@@ -1,10 +1,8 @@
-
-
 export const statistics = {
   display: "flex",
   alignItems: "center",
   justifyContent: "space-evenly",
-  width: "130px",
+  width: "125px",
   height: "70px",
   border: "1px dotted gray",
   borderRadius: "5px",
@@ -13,7 +11,7 @@ export const statistics = {
   backgroundColor: "white",
 };
 
-export const iconStyle =  [
+export const iconStyle = [
   {
     border: "1px solid black",
     borderRadius: "50%",
@@ -41,14 +39,12 @@ export const iconStyle =  [
 ];
 
 export const boxStyle = {
-  maxHeight: 450,
+  height: 450,
   maxWidth: 450,
-  minWidth: 280,
+  minWidth: 250,
   overflow: "scroll",
   "&::-webkit-scrollbar": { display: "none" },
-  marginTop: 4,
-  marginLeft: 2,
-  marginRight: 3,
+  margin: "2.5rem auto",
   boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
   padding: 2,
   backgroundColor: "white",

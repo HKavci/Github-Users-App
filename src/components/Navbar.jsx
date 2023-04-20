@@ -20,12 +20,10 @@ const Navbar = ({ handleDarkMode }) => {
             aria-label="menu"
             sx={{
               mr: 2,
-              // backgroundColor: "#f1f5f8",
               border: "1px solid white",
               transition: "transform 0.7s",
               ":hover": {
                 transform: "rotate(360deg) scale(1.3)",
-                // backgroundColor: "white",
               },
             }}
           >

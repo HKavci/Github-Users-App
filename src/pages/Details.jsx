@@ -10,6 +10,7 @@ import { statistics } from "../styles/globalStyle";
 import { iconStyle } from "../styles/globalStyle";
 import FollowersInfo from "../components/FollowersInfo";
 import RepoInfo from "../components/RepoInfo";
+import { toastWarnNotify } from "./../helper/ToastNotify";
 
 const Details = () => {
   const [userDetails, setUserDetails] = useState({});
@@ -25,6 +26,7 @@ const Details = () => {
       setUserDetails(data);
     } catch (error) {
       console.log(error);
+      toastWarnNotify("Something went wrong");
     }
   };
 
@@ -41,7 +43,6 @@ const Details = () => {
     try {
       const { data } = await axios(`${BASE_URL}/repos`);
       setRepo(data);
-      // console.log(data);
     } catch (error) {
       console.log(error);
     }
@@ -49,12 +50,7 @@ const Details = () => {
 
   useEffect(() => {
     Promise.all([getDetailedData(), getFollowersData(), getRepoData()]);
-    // getDetailedData()
   }, []);
-
-  console.log(userDetails);
-  // console.log(followers);
-  console.log(repo);
 
   return (
     <Container
@@ -69,8 +65,13 @@ const Details = () => {
           width="300px"
           style={{ borderRadius: "50%", border: "1px solid #C7FFED" }}
         />
-        <Typography variant="h5" mt={3} textTransform="capitalize">
-          <b>{userDetails?.name}</b>
+        <Typography
+          variant="h5"
+          mt={3}
+          textTransform="capitalize"
+          fontWeight="bolder"
+        >
+          {userDetails?.name}
         </Typography>
         <Typography variant="p">{userDetails?.html_url}</Typography>
       </Box>
@@ -124,7 +125,7 @@ const Details = () => {
           </Box>
         </Box>
       </List>
-      <Grid container>
+      <Grid container spacing={2}>
         <Grid item xs={12} md={6}>
           <Box>
             <FollowersInfo followers={followers} />

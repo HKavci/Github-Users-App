@@ -1,3 +1,4 @@
+import { ToastContainer } from "react-toastify";
 import "./App.css";
 import AppRouter from "./router/AppRouter";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
@@ -17,16 +18,6 @@ function App() {
     },
   });
 
-  // const darkTheme = createTheme({
-  //   palette: {
-  //     background: {
-  //       paper: "rgba(0, 0, 0, 0.6)",
-  //       // default: "#f1f5f8"
-  //     },
-  //     mode: darkMode ? "dark" : "light",
-  //   },
-  // });
-
   const handleDarkMode = () => {
     setDarkMode(!darkMode);
   };
@@ -36,6 +27,7 @@ function App() {
       <div className={`App ${darkMode ? "dark-mode" : ""}`}>
         <AppRouter darkMode={darkMode} handleDarkMode={handleDarkMode} />
       </div>
+      <ToastContainer />
     </ThemeProvider>
   );
 }
